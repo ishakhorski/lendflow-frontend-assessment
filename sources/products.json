@@ -5,7 +5,7 @@
         "category": "Clothing",
         "price": 15.99,
         "onSale": false,
-        "inStock": false,
+        "totalCount": 0,
         "gender": "women",
         "color": "red"
     },
@@ -15,7 +15,7 @@
         "category": "Clothing",
         "price": 45.00,
         "onSale": true,
-        "inStock": true,
+        "totalCount": 12,
         "gender": "men",
         "color": "blue"
     },
@@ -25,7 +25,7 @@
         "category": "Footwear",
         "price": 89.99,
         "onSale": true,
-        "inStock": true,
+        "totalCount": 10,
         "gender": "unisex",
         "color": "white"
     },
@@ -35,7 +35,7 @@
         "category": "Accessories",
         "price": 120.00,
         "onSale": false,
-        "inStock": false,
+        "totalCount": 0,
         "gender": "women",
         "color": "black"
     },
@@ -45,7 +45,7 @@
         "category": "Accessories",
         "price": 18.99,
         "onSale": false,
-        "inStock": false,
+        "totalCount": 0,
         "gender": "women",
         "color": "blue"
     }
