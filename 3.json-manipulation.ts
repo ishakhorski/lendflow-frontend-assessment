@@ -38,22 +38,24 @@ const outOfStockNotOnSaleUnder20Products = (products: Product[]): Product[] => {
 console.log("1:", outOfStockNotOnSaleUnder20Products(productsData));
 
 // 2. What is the most commonly used category?
-const mostCommonlyUsedCategory = (products: Product[]) => {
+const mostCommonlyUsedCategory = (products: Product[]): string[] => {
     // could be done with reduce to decrease the time complexity,
     // but for this small dataset, this is more readable
 
     const productsByCategory = groupBy(products, (product) => product.category);
-    const mostCommonCategory = Object.keys(productsByCategory).reduce(
-        (acc, category) => {
-            return productsByCategory[category].length >
-                productsByCategory[acc].length
-                ? category
-                : acc;
-        },
-        ""
+    const maxCategoryCount = Math.max(
+        ...Object.values(productsByCategory).map((products) => products.length)
     );
 
-    return mostCommonCategory;
+    if (maxCategoryCount === 0) {
+        return [];
+    }
+
+    const mostCommonCategories = Object.keys(productsByCategory).filter(
+        (category) => productsByCategory[category].length === maxCategoryCount
+    );
+
+    return mostCommonCategories;
 };
 console.log("2:", mostCommonlyUsedCategory(productsData));
 
