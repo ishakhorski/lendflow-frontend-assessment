@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "T-Shirt",
+        "category": "Clothing",
+        "price": 15.99,
+        "onSale": false,
+        "inStock": false,
+        "gender": "women",
+        "color": "red"
+    },
+    {
+        "id": 2,
+        "name": "Jeans",
+        "category": "Clothing",
+        "price": 45.00,
+        "onSale": true,
+        "inStock": true,
+        "gender": "men",
+        "color": "blue"
+    },
+    {
+        "id": 3,
+        "name": "Sneakers",
+        "category": "Footwear",
+        "price": 89.99,
+        "onSale": true,
+        "inStock": true,
+        "gender": "unisex",
+        "color": "white"
+    },
+    {
+        "id": 4,
+        "name": "Handbag",
+        "category": "Accessories",
+        "price": 120.00,
+        "onSale": false,
+        "inStock": false,
+        "gender": "women",
+        "color": "black"
+    },
+    {
+        "id": 5,
+        "name": "Cap",
+        "category": "Accessories",
+        "price": 18.99,
+        "onSale": false,
+        "inStock": false,
+        "gender": "women",
+        "color": "blue"
+    }
+]
