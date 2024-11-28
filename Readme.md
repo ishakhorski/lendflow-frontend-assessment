@@ -43,7 +43,7 @@ Given a TypeScript interface that defines an existing Post from an API:
 interface post {
     id: number;
     title: string;
-    const: string | null;
+    content: string | null;
 }
 ```
 
