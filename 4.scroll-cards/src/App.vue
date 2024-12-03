@@ -22,7 +22,9 @@ const handleIntersectionObserver = (entries: IntersectionObserverEntry[]) => {
 
     if (entry.isIntersecting) {
       if (!visibleCardIds.includes(id)) {
-        if (scrollY <= window.scrollY) {
+        const isScrollingDown = scrollY <= window.scrollY
+
+        if (isScrollingDown) {
           visibleCardIds.push(id)
         } else {
           visibleCardIds.unshift(id)
@@ -30,6 +32,7 @@ const handleIntersectionObserver = (entries: IntersectionObserverEntry[]) => {
       }
     } else {
       const index = visibleCardIds.indexOf(id)
+
       if (index !== -1) {
         visibleCardIds.splice(index, 1)
       }
@@ -54,7 +57,9 @@ const cleanupObserver = () => {
 
 watch(visibleCardIds, (newVisibleCardIds) => {
   if (newVisibleCardIds.length) {
-    if (scrollY <= window.scrollY) {
+    const isScrollingDown = scrollY <= window.scrollY
+
+    if (isScrollingDown) {
       focusedCardId.value = newVisibleCardIds[0]
     } else {
       focusedCardId.value = newVisibleCardIds[newVisibleCardIds.length - 1]
